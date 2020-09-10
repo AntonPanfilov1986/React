@@ -1,0 +1,33 @@
+.month {
+  width: 25%;
+  padding: 10px;
+}
+.month-head {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(255, 247, 10, 0.5);
+  border-radius: 5px;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.month-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.month-body-title {
+  text-align: center;
+  width: 14.28%;
+  font-size: 20px;
+}
+.month-body-day {
+  text-align: center;
+  width: 14.28%;
+  font-size: 20px;
+}
+.month-body-title:nth-child(7n), .month-body-day:nth-child(7n) {
+    color: red;
+}
+.month-body-title:nth-child(7n-1),.month-body-day:nth-child(7n-1) {
+    color: red;
+}
