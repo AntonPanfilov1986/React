@@ -2,5 +2,13 @@
   box-sizing: border-box;
 }
 html {
-  background-image: url(./components/year/fon1.jpg);
+  background: url(./components/year/fon1.jpg) no-repeat;
+  background-size: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: blue;
 }

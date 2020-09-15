@@ -6,10 +6,12 @@ export default class NavbarComponent extends Component {
     render() {
         return (
             <div className='navbar'>
-                <Link to='/today'>
+                <Link to='/year/current'>
                     <div>Current Year</div>
                 </Link>
-               <a href='/today'>Current Month</a>
+                <Link to='/year/current/month/current'>
+                    <div>Current Month</div>
+                </Link>
                <a href='/today'>Today</a>
             </div>
         )

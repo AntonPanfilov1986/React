@@ -15,6 +15,17 @@ export default class App extends Component {
     return (
       <Router>
         <NavBar/>
+        <Switch>
+        <Route path="/year/current" exact render={() => {
+          const today = new Date();
+          const redirectPath = `/year/${today.getFullYear()}`;
+          return (<Redirect to={redirectPath}/>);
+        }} />
+        <Route path="/year/current/month/current" exact render={() => {
+          const today = new Date();
+          const redirectPath = `/year/${today.getFullYear()}/month/${today.getMonth() + 1}`;
+          return (<Redirect to={redirectPath}/>);
+        }} />
           <Route path="/year/:year" exact render={({ match }) => {
             return (
               <YearPage year={match.params.year}/> 
@@ -32,8 +43,8 @@ export default class App extends Component {
           const today = new Date();
           const redirectPath = `/year/${today.getFullYear()}`;
           return (<Redirect to={redirectPath}/>);
-        }
-        } />
+        }} />
+        </Switch>
       </Router>
     );
   }

@@ -6,7 +6,9 @@
   display: flex;
   justify-content: center;
 }
-
+.month-page .month {
+  width: 33.33%;
+}
 .month-page .month-body-title,  .month-page .month-body-day {
   font-size: 40px;
 }
@@ -22,6 +24,7 @@
   font-weight: 500;
   margin-bottom: 10px;
 }
+
 .month-body {
   display: flex;
   flex-wrap: wrap;
@@ -32,9 +35,9 @@
   font-size: 20px;
   
 }
-.month-body-title:nth-child(7n), .month-body-day:nth-child(7n) {
+.month-body-title:nth-child(7n) {
   color: red;
 }
-.month-body-title:nth-child(7n+1),.month-body-day:nth-child(7n+1) {
+.month-body-title:nth-child(7n+1) {
   color: red;
 }

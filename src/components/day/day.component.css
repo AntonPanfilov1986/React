@@ -3,7 +3,18 @@
     width: 14.28%;
     font-size: 20px;
   }
+  .day:nth-child(7n) {
+    color: red;
+  }
+  .day:nth-child(7n+1) {
+    color: red;
+  }
   .day.today {
       background-color: rgba(255, 0, 0, 0.5);
       border-radius: 50%;
   }
+  .day:nth-child(7n).today,
+  .day:nth-child(7n+1).today {
+    color: black;
+  }
+  
