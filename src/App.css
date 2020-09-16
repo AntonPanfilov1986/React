@@ -2,8 +2,8 @@
   box-sizing: border-box;
 }
 html {
-  background: url(./components/year/fon1.jpg) no-repeat;
-  background-size: 100%;
+  background: url(./components/yearpage/fon1.jpg) no-repeat;
+  background-size: cover;
 }
 a {
   text-decoration: none;

@@ -28,7 +28,7 @@ button:focus {
     outline: none;
 }
 .year-body-wrap {
-    padding: 50px 25px 0 25px;
+    padding: 50px 100px 0 100px;
 }
 .year-body-section {
     display: flex;

@@ -4,7 +4,7 @@ export default class DayPageComponent extends Component {
     render() {
         return (
             <div>
-                
+              <input type="text"/>
             </div>
         )
     }

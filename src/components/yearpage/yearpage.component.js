@@ -1,4 +1,4 @@
-import './year.component.css';
+import './yearpage.component.css';
 import React, { Component } from 'react';
 import { Month } from '..';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,7 @@ export default class YearComponent extends Component {
 //   this.setState({currentYear: this.state.currentYear - 1});
 // }
 render() {
+  console.log('Year page content', this.props.todos)
   const months = Array(12).fill(null).map((x, index) => new Date(this.props.year, index, 1));
     return (
       <div className="year">
@@ -28,7 +29,7 @@ render() {
         <div className="year-body-wrap">
             <div className="year-body-section">
           {months.map(startDate => (
-            <Month key={startDate.toISOString()} startDate={startDate}/>
+            <Month key={startDate.toISOString()} startDate={startDate} todos={this.props.todos}/>
           ))}
           </div>
         </div>
