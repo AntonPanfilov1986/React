@@ -9,7 +9,13 @@
   .day:nth-child(7n+1) {
     color: red;
   }
-  .day.today {
+  .day:nth-child(7n):hover {
+    color: blue;
+  }
+  .day:nth-child(7n+1):hover {
+    color: blue;
+  }
+  a > .today {
       background-color: rgba(255, 0, 0, 0.5);
       border-radius: 50%;
   }

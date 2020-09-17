@@ -1,0 +1,42 @@
+.day-page {
+    text-align: center;
+}
+.day-page-style {
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.day-page > form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    margin: 0 auto;
+}
+.day-page > form > input {
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: inherit;
+    border: 2px solid white;
+    padding: 10px;
+    outline: none;
+}
+.day-page > form > .submit {
+    width: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.day-page > form > .submit:hover {
+    border: 2px solid white;
+    background-color: rgba(255, 247, 10, 0.3);
+}
+.day-page > form > input:focus {
+    border: 2px solid rosybrown;
+}
+.day-page > form > .submit:active {
+    border: 2px solid rosybrown;
+    background-color: inherit;
+}

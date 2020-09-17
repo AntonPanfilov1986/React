@@ -1,4 +1,9 @@
 .navbar {
     display: flex;
     justify-content: space-evenly;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 30px 0;
+
   }

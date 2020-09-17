@@ -43,14 +43,16 @@ state = {
           }}/>
            <Route path="/year/:year/month/:month" exact render={({ match }) => {
             return (
-              <DayPage startDate={new Date(Number(match.params.year), Number(match.params.month) - 1, Number(match.params.day))}/> 
-            )
-          }}/>
-           <Route path="/year/:year/month/:month/day/:day" exact render={({ match }) => {
-            return (
               <div className="month-page">
               <Month startDate={new Date(Number(match.params.year), Number(match.params.month) - 1)}/> 
               </div>
+            )
+          }}/>
+          <Route path="/year/:year/month/:month/day/:day" exact render={({ match }) => {
+            return (
+              <DayPage startDate={new Date(Number(match.params.year), 
+                Number(match.params.month) - 1, 
+                Number(match.params.day))}/> 
             )
           }}/>
           <Route path="/today" exact render={() => {

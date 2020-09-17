@@ -11,4 +11,5 @@ a {
 }
 a:hover {
   color: blue;
+  transition: 500ms;
 }
