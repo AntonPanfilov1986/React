@@ -40,3 +40,6 @@
     border: 2px solid rosybrown;
     background-color: inherit;
 }
+.todo-item {
+    border: 1px solid white;
+}

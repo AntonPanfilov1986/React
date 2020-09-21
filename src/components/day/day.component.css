@@ -1,7 +1,11 @@
 .day {
     text-align: center;
     width: 14.28%;
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .day.has-todos {
+    background-color: red;
+    border-radius: 50%;
   }
   .day:nth-child(7n) {
     color: red;
@@ -16,8 +20,12 @@
     color: blue;
   }
   a > .today {
-      background-color: rgba(255, 0, 0, 0.5);
+      background-color: rgba(255, 0, 0, 0.4);
       border-radius: 50%;
+      color: black;
+  }
+  a > .today:hover {
+    color: blue;
   }
   .day:nth-child(7n).today,
   .day:nth-child(7n+1).today {

@@ -7,7 +7,7 @@
   justify-content: center;
 }
 .month-page .month {
-  width: 33.33%;
+  max-width: 500px;
 }
 .month-page .month-body-title,  .month-page .month-body-day {
   font-size: 40px;
@@ -24,7 +24,6 @@
   font-weight: 500;
   margin-bottom: 10px;
 }
-
 .month-body {
   display: flex;
   flex-wrap: wrap;
@@ -32,8 +31,10 @@
 .month-body-title {
   text-align: center;
   width: 14.28%;
-  font-size: 20px;
-  
+  font-size: 18px;
+}
+.month-body .day {
+  font-size: 26px;
 }
 .month-body-title:nth-child(7n) {
   color: red;
