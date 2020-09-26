@@ -5,15 +5,17 @@
 .month-page {
   display: flex;
   justify-content: center;
+  max-width: 350px;
+  margin: 0 auto;
 }
 .month-page .month {
-  max-width: 500px;
+  width: 100% !important;
 }
 .month-page .month-body-title,  .month-page .month-body-day {
-  font-size: 40px;
+  font-size: 24px;
 }
 .month-page .month-head {
-  font-size: 40px;
+  font-size: 26px;
 }
 .month-head {
   text-align: center;
@@ -34,7 +36,7 @@
   font-size: 18px;
 }
 .month-body .day {
-  font-size: 26px;
+  font-size: 20px;
 }
 .month-body-title:nth-child(7n) {
   color: red;

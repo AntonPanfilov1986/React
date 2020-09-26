@@ -1,4 +1,4 @@
-import { find, pick } from 'lodash';
+import { find, pick, remove } from 'lodash';
 import React, { Component } from 'react'
 import Todo from '../../models/todo.model';
 import { todoService } from '../../services/todo.service';
@@ -47,6 +47,16 @@ export default class DayPageComponent extends Component {
         isFormVisible: true,
       });
     }
+    handleDeleteTodo = (event) => {
+      const id = event.currentTarget.dataset.id;
+      const currentTodoDelete = find(this.props.todos, { id });
+      todoService.deleteFromLocalStorage(currentTodoDelete);
+      const currentTodo = remove(this.props.todos);
+      this.setState({
+        currentTodo,
+        isFormVisible: false,
+    });
+  }
     render() {
       const { year, month, day } = this.props;
       const today = new Date( year, month - 1, day);
@@ -63,8 +73,8 @@ export default class DayPageComponent extends Component {
                   onClick={this.handleTodoClick}
                   data-id={todo.id}
                 >   
-                <div>{todo.title}</div>
-                <div>{todo.description}</div>
+                  <div className='todo-item-title'>{todo.title}</div>
+                    <div>{todo.description}</div>
                 </div>
               ))}
               { this.state.isFormVisible ? 
@@ -83,8 +93,11 @@ export default class DayPageComponent extends Component {
                   onChange={this.handleDescriptionChange}
                   placeholder='Description'
                 />
-                <input className="submit" type="submit" value='Submit'/>
-              </form> : <button onClick={this.handleAddButtonClick}>Add</button> }
+                <div className='change-todo'>
+                <input className="change-todo-submit" type="submit" value='Submit'/>
+                <button onClick={this.handleDeleteTodo} className='change-todo-delete'>delete</button>
+                </div>
+              </form> : <button onClick={this.handleAddButtonClick}>Add todo</button> }
         </div>
         )
     }

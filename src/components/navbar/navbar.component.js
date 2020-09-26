@@ -12,7 +12,9 @@ export default class NavbarComponent extends Component {
                 <Link to='/year/current/month/current'>
                     <div>Current Month</div>
                 </Link>
-               <a href='/today'>Today</a>
+                <Link to='/year/current/month/current/day/current'>
+                    <div>Today</div>
+                </Link>
             </div>
         )
     }

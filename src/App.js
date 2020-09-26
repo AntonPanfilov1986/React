@@ -48,6 +48,13 @@ handletodoUpdate = (event)=> {
           const redirectPath = `/year/${today.getFullYear()}/month/${today.getMonth() + 1}`;
           return (<Redirect to={redirectPath}/>);
         }} />
+        <Route path="/year/current/month/current/day/current" exact render={() => {
+          const today = new Date();
+          const redirectPath = `/year/${today.getFullYear()}/month/${today.getMonth() + 1}/day/${today.getDate()}`;
+          return (<Redirect to={redirectPath}/>);
+        }} />
+
+
           <Route path="/year/:year" exact render={({ match }) => {
             return (
               <YearPage 

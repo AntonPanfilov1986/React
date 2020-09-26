@@ -8,11 +8,10 @@
     margin-bottom: 20px;
     text-transform: uppercase;
 }
-.day-page > form {
+.day-page > form, .todo-item {
     display: flex;
     flex-direction: column;
     width: 600px;
-    align-items: center;
     margin: 0 auto;
 }
 .day-page > form > input {
@@ -25,6 +24,7 @@
 }
 .day-page > form > .submit {
     width: 100px;
+    margin: 0 auto;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -42,4 +42,14 @@
 }
 .todo-item {
     border: 1px solid white;
+}
+.day-page .todo-item {
+    text-align: left;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    padding: 10px;
+}
+.todo-item-title {
+   font-size: 20px;
+   font-weight: 600;
 }

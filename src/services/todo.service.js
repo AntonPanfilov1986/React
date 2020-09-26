@@ -23,6 +23,9 @@ class TodoService extends EventTarget {
   save() {
     this._saveToLocalStorage();
   }
+  deleteFromLocalStorage(key) {
+    localStorage.removeItem(key);
+  }
   upsertTodo({ year, month, day }, todo) {
     const dayTodos = Array.from(get(this.todos, [year, month, day], []));
     const todoIndex = findIndex(dayTodos, {id: todo.id});
