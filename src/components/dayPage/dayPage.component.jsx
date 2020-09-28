@@ -47,16 +47,6 @@ export default class DayPageComponent extends Component {
         isFormVisible: true,
       });
     }
-    handleDeleteTodo = (event) => {
-      const id = event.currentTarget.dataset.id;
-      const currentTodoDelete = find(this.props.todos, { id });
-      todoService.deleteFromLocalStorage(currentTodoDelete);
-      const currentTodo = remove(this.props.todos);
-      this.setState({
-        currentTodo,
-        isFormVisible: false,
-    });
-  }
     render() {
       const { year, month, day } = this.props;
       const today = new Date( year, month - 1, day);
@@ -93,10 +83,7 @@ export default class DayPageComponent extends Component {
                   onChange={this.handleDescriptionChange}
                   placeholder='Description'
                 />
-                <div className='change-todo'>
-                <input className="change-todo-submit" type="submit" value='Submit'/>
-                <button onClick={this.handleDeleteTodo} className='change-todo-delete'>delete</button>
-                </div>
+                <input className="submit" type="submit" value='Submit'/>
               </form> : <button onClick={this.handleAddButtonClick}>Add todo</button> }
         </div>
         )
