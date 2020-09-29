@@ -6,6 +6,7 @@
   .day.has-todos {
     background-color: red;
     border-radius: 50%;
+    color: black !important;
   }
   .day:nth-child(7n) {
     color: red;

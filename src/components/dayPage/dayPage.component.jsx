@@ -1,4 +1,4 @@
-import { find, pick, remove } from 'lodash';
+import { find, pick } from 'lodash';
 import React, { Component } from 'react'
 import Todo from '../../models/todo.model';
 import { todoService } from '../../services/todo.service';
@@ -47,6 +47,15 @@ export default class DayPageComponent extends Component {
         isFormVisible: true,
       });
     }
+    handleDelete = (event) => {
+      event.preventDefault();
+      todoService.deleteTodo(pick(this.props, ['year', 'month', 'day']), this.state.currentTodo);
+      this.setState({
+        currentTodo: null,
+        isFormVisible: false,
+      })
+      
+    }
     render() {
       const { year, month, day } = this.props;
       const today = new Date( year, month - 1, day);
@@ -83,7 +92,10 @@ export default class DayPageComponent extends Component {
                   onChange={this.handleDescriptionChange}
                   placeholder='Description'
                 />
+                <div className='change-todo'>
                 <input className="submit" type="submit" value='Submit'/>
+                <button onClick={this.handleDelete} className='change-todo-delete'>delete</button>
+                </div>
               </form> : <button onClick={this.handleAddButtonClick}>Add todo</button> }
         </div>
         )

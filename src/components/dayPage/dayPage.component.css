@@ -22,23 +22,26 @@
     padding: 10px;
     outline: none;
 }
-.day-page > form > .submit {
-    width: 100px;
-    margin: 0 auto;
-    font-weight: 700;
+.change-todo {
+    display: flex;
+    justify-content: space-evenly;
+}
+.change-todo > .submit {
+    width: 150px;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-.day-page > form > .submit:hover {
-    border: 2px solid white;
-    background-color: rgba(255, 247, 10, 0.3);
-}
-.day-page > form > input:focus {
-    border: 2px solid rosybrown;
-}
-.day-page > form > .submit:active {
-    border: 2px solid rosybrown;
+    outline: none;
     background-color: inherit;
+    background: transparent;
+    border-radius: 10%;
+    border-color: rgba(144, 185, 107, 0.5);
+    font-size: 18px;
+}
+.change-todo > .submit:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.change-todo > .submit:active {
+    background: transparent;
 }
 .todo-item {
     border: 1px solid white;

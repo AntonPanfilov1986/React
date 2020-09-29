@@ -21,6 +21,7 @@
 button {
     text-transform: uppercase;
     background: transparent;
+    width: 150px;
     border-radius: 10%;
     border-color: rgba(144, 185, 107, 0.5);
     font-size: 18px;
